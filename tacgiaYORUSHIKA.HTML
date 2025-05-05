@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <title>TM</title>
+    <link rel="icon" href="theresa.png">
+    <style>
+        .thanh-ngang {
+            background-color: rgb(102, 20, 127);
+            border: 8px solid black;
+            display: flex;
+            align-items: center;
+        }
+
+        .thanh-ngang input[type="text"] {
+            width: 1200px;
+            height: 40px;
+            font-size: 18px;
+            padding: 10px;
+            border: 8px solid rgb(0, 0, 0);
+            margin-right: 10px;
+        }
+
+        .thanh-ngang button {
+            height: 40px;
+            font-size: 16px;
+            background-color: rgb(255, 255, 255);
+            border: 4px solid black;
+            margin-left: 40px;
+        }
+
+        /* Khung nghệ sĩ */
+        .centerbaihat {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            gap: 40px;
+            padding: 40px;
+            background-image: url(wallpaperflare.com_wallpaper.jpg);
+            background-size: cover;
+            background-position: center;
+        }
+
+        /* Ảnh vuông nghệ sĩ */
+        .hinh-vuong {
+            height: 200px;
+            width: 200px;
+            border: 8px solid white;
+            background-image: url(yorushika.jpg);
+            background-position: center;
+            background-size: cover;
+            margin: 20px auto;
+            border-radius: 12px;
+            box-shadow: 0 0 20px rgba(255, 255, 255, 0.3);
+        }
+
+        /* Tiêu đề */
+        .title-box {
+            background: rgba(255, 255, 255, 0.85);
+            padding: 10px 20px;
+            border-radius: 10px;
+            font-size: 22px;
+            font-weight: bold;
+            color: black;
+            text-align: center;
+            border: 2px solid black;
+            margin: 10px;
+        }
+
+        /* Phần bài hát */
+        .loi-bai-hat {
+            text-align: center;
+            color: aliceblue;
+            font-size: 20px;
+            font-weight: bold;
+            background: linear-gradient(to bottom, #5b236e, #3b104b);
+            padding: 40px 10px;
+            min-height: 100vh;
+        }
+
+        /* Khối bài hát */
+        .baihattacgia {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 40px;
+            margin-top: 30px;
+        }
+
+        .baihat {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .baihat img {
+            width: 200px;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 12px;
+            border: 4px solid white;
+        }
+
+        .baihat:hover {
+            transform: scale(1.05);
+            box-shadow: 0 0 20px white;
+        }
+
+        .nghe-si-box {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .tieu-su {
+            max-width: 500px;
+            color: white;
+            background: rgba(0, 0, 0, 0.4);
+            padding: 20px;
+            border-radius: 15px;
+            font-size: 16px;
+            line-height: 1.6;
+            box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+        }
+
+        .tieu-su h1 {
+            margin-top: 0;
+            color: #ffd700;
+        }
+
+        .tieu-su p {
+            font-size: 20px;
+        }
+        .suggestions {
+            position: absolute;
+            top: 100%;
+            left: 0;
+            width: 100%; /* Chiều dài bằng 100% ô tìm kiếm */
+            background: white;
+            border: 1px solid #ccc;
+            z-index: 10;
+    }
+
+            .suggestions div {
+            padding: 10px;
+            font-size: 20px;
+            cursor: pointer;
+            transition: background 0.2s;
+    }
+
+            .suggestions div:hover {
+            background: #f2f2f2;
+    }
+            .input-wrapper {
+            position: relative;
+            width: 1200px; 
+    }
+    </style>
+</head>
+
+<body>
+    <form action="#" method="GET">
+        <div class="thanh-ngang">
+            
+            <a href="index.html" target="_self" title="trở về home">
+                <img src="theresa.png" height="80">
+            </a>    
+            <div class="input-wrapper">
+                <input type="text" name="tenbaihat" placeholder="Nhập tên bài hát"> 
+                <div class="suggestions"></div>
+            </div> 
+            <button type="submit">Tìm Kiếm</button>
+        </div>
+        </form>
+    <div class="centerbaihat">
+        <div class="nghe-si-box">
+            <div class="title-box">Nghệ Sĩ</div>
+            <div class="hinh-vuong"></div>
+            <div class="title-box">Yorushika</div>
+        </div>
+
+        <div class="tieu-su">
+            <h1>Thông Tin</h1>
+            <p>Yorushika là một nhóm nhạc Nhật Bản gồm hai thành viên chính: nhạc sĩ n-buna và ca sĩ Suis. Nhóm nổi bật
+                với phong cách kết hợp giữa rock, pop và ca từ mang chiều sâu triết lý, thường xoay quanh chủ đề thời
+                gian, ký ức và cảm xúc con người. Yorushika không thường xuất hiện công khai, giữ hình ảnh bí ẩn để
+                người nghe tập trung vào âm nhạc và thông điệp họ truyền tải. </p>
+        </div>
+
+    </div>
+    <div class="loi-bai-hat">
+        <h1>Bài hát của tác giả</h1>
+        <div class="baihattacgia">
+            <div class="baihat">
+                <a href="thongtinHARU.HTML"><img src="Haru.jpg" height="200"></a>
+                <div class="title-box">Haru</div>
+            </div>
+            <div class="baihat">
+                <a href="thongtinWasurete.html"><img src="wasurete.jpg" height="200"></a>
+                <div class="title-box">Wasurete Kudasai</div>
+            </div>
+        </div>
+
+    </div>
+    <script src="Timkiem.js"></script>
+</body>
+
+</html>
