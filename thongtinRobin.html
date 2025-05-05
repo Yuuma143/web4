@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <title>TM</title>
+    <style>
+        .thanh-ngang {
+            background-color: rgb(102, 20, 127);
+            border: 8px solid black;
+            display: flex;
+            align-items: center;
+        }
+
+        .thanh-ngang input[type="text"] {
+            width: 1200px;
+            height: 40px;
+            font-size: 18px;
+            padding: 10px;
+            border: 8px solid rgb(0, 0, 0);
+            margin-right: 10px;
+        }
+
+        .thanh-ngang button {
+            height: 40px;
+            font-size: 16px;
+            background-color: rgb(255, 255, 255);
+            border: 4px solid black;
+            margin-left: 40px;
+        }
+        .title-box {
+        background: rgba(255, 255, 255, 0.8); 
+        padding: 10px 20px;
+        border-radius: 10px; 
+        font-size: 24px;
+        font-weight: bold;
+        color: black;
+        text-align: center;
+        border: 3px solid black;
+}
+        .hinh-vuong{
+            height: 200px;
+            width: 200px;
+            border: 12px solid rgb(0, 0, 0);    
+            background-image: url(Robin.webp);
+            background-position: center; 
+            background-size: cover; 
+            margin:  auto;  
+        }
+        .centerbaihat{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background-image: url(star-rail-hope-is-a-thing-with-feathers-guide.webp);
+            background-size: cover;
+            background-position: center;
+    
+        }
+        .thong-tin{
+            text-align: center;
+            font-size:20px;
+        }
+        .audio{
+            text-align: center;
+        }
+        .loi-bai-hat{
+            text-align: center;
+            color:aliceblue;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 16px;
+            line-height: 1.6;
+            border: 15px solid rgb(0, 0, 0); 
+            padding: 10px; 
+            font-size: 20px;
+            font-weight: bold;  
+            text-align: center;
+            background-color: rgb(102, 20, 127);
+            
+        }
+        .centerbaihat audio {
+        width: 60%;
+        height: 60px;
+         border-radius: 350px;
+        background-color: rgb(102, 20, 127);
+        padding: 20px;
+        border: 5px solid rgb(255, 255, 255) ;
+        }
+        .suggestions {
+            position: absolute;
+            top: 100%;
+            left: 0;
+            width: 100%;
+            /* Chiều dài bằng 100% ô tìm kiếm */
+            background: white;
+            border: 1px solid #ccc;
+            z-index: 10;
+        }
+
+        .suggestions div {
+            padding: 10px;
+            font-size: 20px;
+            cursor: pointer;
+            transition: background 0.2s;
+        }
+
+        .suggestions div:hover {
+            background: #f2f2f2;
+        }
+
+        .input-wrapper {
+            position: relative;
+            width: 1200px;
+        }
+
+    </style>
+</head>
+<body>
+    <form action="#" method="GET">
+        <div class="thanh-ngang">
+
+            <a href="index.html" target="_self" title="trở về home">
+                <img src="theresa.png" height="80">
+            </a>
+            <div class="input-wrapper">
+                <input type="text" name="tenbaihat" placeholder="Nhập tên bài hát">
+                <div class="suggestions"></div>
+            </div>
+            <button type="submit">Tìm Kiếm</button>
+        </div>
+    </form>
+        <div class="centerbaihat">
+                <div class="title-box"><a href="tacgiaHoyomix.html">HOYO-MiX</a></div>
+            <div class="hinh-vuong"></div>
+                <div class="title-box">Hope Is the Thing With Feathers</div>
+            <audio controls>
+                <source src="robin.m4a">
+            </audio>
+        </div>
+    <div class="loi-bai-hat">
+        <h1>Lời Bài Hát</h1>
+        <pre>
+We rise together as our destiny unfolds
+We face the darkness and our trials are yet untold
+Through the shadows of despair
+Oh, in silence, hopes we share, woah-woah
+To chase our dreams that we've declared
+            
+[Pre-Chorus]
+We glimpse, through our eyes
+Yet fools, blind our sights
+Can't make what they say
+We'll find our way, we'll find our way
+            
+[Chorus]
+Heads up! The wheels are spinning
+Across the plains, in valleys deep
+To dawn, the wheels that sing
+An unending dream!
+Heads up! Thе tracks are running
+Across the plains, wherе shadows hide
+We run, we stride, woah-oh
+            
+[Verse 2]
+In the face of fear and plight
+And yet we hold our ground, woah
+In life we stand and strive
+Our victory is found
+See upcoming pop shows
+Get tickets for your favorite artists
+            
+[Pre-Chorus]
+And the storms we've weathered through
+And we hope in the light of truth, woah-oh
+To break free from chains and come anew
+            
+[Chorus]
+Heads up! The wheels are spinning
+Across the plains, in valleys deep
+To dawn, the wheels that sing
+An unending dream!
+Heads up! The tracks are running
+Across the plains, where shadows hide
+We run, we stride, woah-oh
+            
+[Bridge]
+(Woah, woah, woah, woah)
+(Woah, woah, woah, woah)
+Woah, woah, woah, woah
+Woah, woah, woah, woah
+            
+[Chorus]
+Heads up! A steady rhythm
+A destination that's ever near
+It comes! Stride to our kingdom
+And see the light of day
+Heads up! The wheels are singing
+The whispers and secrets they'd keep
+To hope! We bound, woah-oh
+            
+            
+[Outro]
+Break free, we chased our dreams, beneath the starry night
+In the face of god, we rose, as one
+        </pre>
+    </div>
+    <script src="Timkiem.js"></script>
+</body> 
+</html>

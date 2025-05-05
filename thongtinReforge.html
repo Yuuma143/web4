@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <title>TM</title>
+    <link rel="icon" href="theresa.png">
+    <style>
+        .thanh-ngang {
+            background-color: rgb(102, 20, 127);
+            border: 8px solid black;
+            display: flex;
+            align-items: center;
+        }
+
+        .thanh-ngang input[type="text"] {
+            width: 1200px;
+            height: 40px;
+            font-size: 18px;
+            padding: 10px;
+            border: 8px solid rgb(0, 0, 0);
+            margin-right: 10px;
+        }
+
+        .thanh-ngang button {
+            height: 40px;
+            font-size: 16px;
+            background-color: rgb(255, 255, 255);
+            border: 4px solid black;
+            margin-left: 40px;
+        }
+        .title-box {
+        background: rgba(255, 255, 255, 0.8); 
+        padding: 10px 20px;
+        margin: 20px;
+        border-radius: 10px; 
+        font-size: 24px;
+        font-weight: bold;
+        color: black;
+        text-align: center;
+        border: 3px solid black;
+}
+        .hinh-vuong{
+            height: 200px;
+            width: 200px;
+            border: 12px solid rgb(0, 0, 0);    
+            background-image: url(Reforge.jpg);
+            background-position: left; 
+            margin: 20px auto; 
+            background-size: cover;
+        }
+        .centerbaihat{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background-image: url(wallpaperflare.com_wallpaper.jpg);
+            background-size: cover;
+        }
+        .centerbaihat audio {
+        width: 60%;
+        height: 60px;
+         border-radius: 350px;
+        background-color: rgb(102, 20, 127);
+        padding: 20px;
+        border: 5px solid rgb(255, 255, 255) ;
+        }
+        
+
+        .loi-bai-hat{
+            
+            color:aliceblue;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 16px;
+            border: 15px solid rgb(0, 0, 0); 
+            padding: 10px; 
+            font-size: 20px;
+            font-weight: bold;  
+            background-color: rgb(91, 35, 110);
+            text-align: center;
+        }
+        .suggestions {
+            position: absolute;
+            top: 100%;
+            left: 0;
+            width: 100%;
+            /* Chiều dài bằng 100% ô tìm kiếm */
+            background: white;
+            border: 1px solid #ccc;
+            z-index: 10;
+        }
+
+        .suggestions div {
+            padding: 10px;
+            font-size: 20px;
+            cursor: pointer;
+            transition: background 0.2s;
+        }
+
+        .suggestions div:hover {
+            background: #f2f2f2;
+        }
+
+        .input-wrapper {
+            position: relative;
+            width: 1200px;
+        }
+
+    </style>
+</head>
+<body>
+    <form action="#" method="GET">
+        <div class="thanh-ngang">
+
+            <a href="index.html" target="_self" title="trở về home">
+                <img src="theresa.png" height="80">
+            </a>
+            <div class="input-wrapper">
+                <input type="text" name="tenbaihat" placeholder="Nhập tên bài hát">
+                <div class="suggestions"></div>
+            </div>
+            <button type="submit">Tìm Kiếm</button>
+        </div>
+    </form>
+        <div class="centerbaihat">
+                <div class="title-box"><a href="tacgiaAcross.html">Arknights</a></div>
+                    <div class="hinh-vuong"></div>
+                <div class="title-box">Reforge</div>
+            <audio controls>
+                <source src="Reforge.mp3">
+            </audio>
+        </div>
+    <div class="loi-bai-hat">
+        <h1>Lời Bài Hát</h1>
+        <pre>
+As we wade into the golden gleaming light
+Victoria, for you, we fight
+We are the ones who always rise
+A hero born to ease our plight
+To light within, ignite
+Ever the battle, we struggle and saddle on
+Honor and ardor, lost an onerous cost
+To reawaken this part so forsaken in us
+Though we may fall, we will rise again
+We face our failures, standing side by side
+ Arise, my friends, we'll turn this tide
+To arms, we stride with head held high
+To rebuild our hope anew
+With everything we made
+The sacrifice we gave
+To watch it fade away
+Now arm in arm, my friend
+Together we can mend
+And build our strength again
+Awaken me again
+A churning tide, it swells within
+Awaken
+We are the ones who will rise again
+We raise the banner
+With thunder, we clamor on
+Honor and ardor lost
+An onerous cost
+To reawaken
+A hope so forsaken in us
+Though we may fall, we will rise again, reborn
+Victoria, there's no need to mourn
+We will mend and defend
+We will ascend, reborn
+Awaken me again
+A turning tide, it swells within
+Awaken
+We are the ones who will rise again
+We are reborn again
+        </pre>
+    </div>
+    <script src="Timkiem.js"></script>
+</body> 
+</html>

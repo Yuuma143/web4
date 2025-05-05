@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <title>TM</title>
+    <link rel="icon" href="theresa.png">
+    <style>
+        .thanh-ngang {
+            background-color: rgb(102, 20, 127);
+            border: 8px solid black;
+            display: flex;
+            align-items: center;
+        }
+
+        .thanh-ngang input[type="text"] {
+            width: 1200px;
+            height: 40px;
+            font-size: 18px;
+            padding: 10px;
+            border: 8px solid rgb(0, 0, 0);
+            margin-right: 10px;
+        }
+
+        .thanh-ngang button {
+            height: 40px;
+            font-size: 16px;
+            background-color: rgb(255, 255, 255);
+            border: 4px solid black;
+            margin-left: 40px;
+        }
+
+        .hinh-vuong{
+            height: 200px;
+            width: 200px;
+            border: 12px solid rgb(0, 0, 0);    
+            background-image: url(lonely.jpg);
+            background-position: center; 
+            margin: 20px auto; 
+            background-size: cover;
+        }
+        .centerbaihat{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background-image: url(wallpaperflare.com_wallpaper.jpg);
+            background-size: cover;
+            background-position: center;
+    
+        }
+        .title-box {
+        background: rgba(255, 255, 255, 0.8); 
+        padding: 10px 20px;
+        margin: 20px;
+        border-radius: 10px; 
+        font-size: 24px;
+        font-weight: bold;
+        color: black;
+        text-align: center;
+        border: 3px solid black;
+}
+        .centerbaihat audio {
+        width: 60%;
+        height: 60px;
+         border-radius: 350px;
+        background-color: rgb(102, 20, 127);
+        padding: 20px;
+        border: 5px solid rgb(255, 255, 255) ;
+        }
+
+        .loi-bai-hat{
+            text-align: center;
+            color:aliceblue;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 16px;
+            line-height: 1.6;
+            border: 15px solid rgb(0, 0, 0); 
+            padding: 10px; 
+            font-size: 20px;
+            font-weight: bold;  
+            text-align: center;
+            background-color: rgb(102, 20, 127);
+            
+        }
+        .suggestions {
+            position: absolute;
+            top: 100%;
+            left: 0;
+            width: 100%;
+            /* Chiều dài bằng 100% ô tìm kiếm */
+            background: white;
+            border: 1px solid #ccc;
+            z-index: 10;
+        }
+
+        .suggestions div {
+            padding: 10px;
+            font-size: 20px;
+            cursor: pointer;
+            transition: background 0.2s;
+        }
+
+        .suggestions div:hover {
+            background: #f2f2f2;
+        }
+
+        .input-wrapper {
+            position: relative;
+            width: 1200px;
+        }
+
+    </style>
+</head>
+<body>
+    <form action="#" method="GET">
+        <div class="thanh-ngang">
+
+            <a href="index.html" target="_self" title="trở về home">
+                <img src="theresa.png" height="80">
+            </a>
+            <div class="input-wrapper">
+                <input type="text" name="tenbaihat" placeholder="Nhập tên bài hát">
+                <div class="suggestions"></div>
+            </div>
+            <button type="submit">Tìm Kiếm</button>
+        </div>
+    </form>
+    <div class="centerbaihat">
+            <div class="title-box"><a href="tacgiamonitor.html">Vexento</a></div>
+        <div class="hinh-vuong"></div>
+            <div class="title-box">Lonely Dance</div>
+        <audio controls>
+            <source src="lonely.mp3">
+        </audio>
+    </div>
+    <div class="loi-bai-hat">
+        <h1>Lời Bài Hát</h1>
+        <pre>
+We're lonely dancers
+Join me for the night
+We're lonely dancers, baby
+Dance with me so we don't cry
+We're lonely dancers
+There's no need to hide
+I know the answer, baby
+Dance with me so we don't cry
+La, la, la-la, la, cry
+La, la, la-la, la
+Your lover left you
+Broke up tonight
+My lover's busy
+Kissin' other guys, oh
+We're both alone now
+Tears in our eyes
+ I know the perfect way
+To waste our time
+ We're lonely dancers
+Join me for the night
+We're lonely dancers, baby
+ Dance with me so we don't cry
+We're lonely dancers
+There's no need to hide
+I know the answer, baby
+Dance with me so we don't cry
+Oh, oh, oh-oh cry, la, la, la-la, la, cry
+Oh, oh, oh-oh cry, la, la, la-la, la
+Wait, stop
+Forget that guy
+He don't know love
+I hope he dies
+Get (get) back (back) up (up)
+We'll be alright
+ttonight, you're mine (tonight, you're mine)
+(Tonight, you're mine, tonight, you're mine)
+We're lonely dancers
+Join me for the night (hey)
+We're lonely dancers, baby
+ Dance with me (me) so we don't cry
+We're lonely dancers
+There's no need to hide (oh)
+I know the answer, baby
+Dance with me so we don't cry
+Oh, oh, oh-oh cry, la, la, la-la, la, cry
+Dance with me so we don't cry
+Oh, oh, oh-oh cry, la, la, la-la, la, cry
+Oh, oh, oh-oh cry, dance with me so we don't cry
+        </pre>
+    </div>
+    <script src="Timkiem.js"></script>
+</body> 
+</html>

@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <title>TM</title>
+    <link rel="icon" href="theresa.png">
+    <style>
+        .thanh-ngang{
+            background-color:rgb(102, 20, 127);
+            border: 8px solid black;
+            display: flex;
+            align-items: center; 
+        }
+
+        .thanh-ngang input[type="text"] {
+        width: 1200px;
+        height: 40px; 
+        font-size: 18px; 
+        padding: 10px;
+        border: 8px solid rgb(0, 0, 0);
+        margin-right: 10px;
+    }
+    .thanh-ngang button {
+        height: 40px; 
+        font-size: 16px;
+        background-color: rgb(255, 255, 255); 
+        border: 4px solid black;
+        margin-left: 40px;
+}
+        .title-box {
+        background: rgba(255, 255, 255, 0.8); 
+        padding: 10px 20px;
+        margin: 20px;
+        border-radius: 10px; 
+        font-size: 24px;
+        font-weight: bold;
+        color: black;
+        text-align: center;
+        border: 3px solid black;
+}
+        .hinh-vuong{
+            height: 200px;
+            width: 200px;
+            border: 12px solid rgb(0, 0, 0);    
+            background-image: url(Sures.jpg);
+            background-position: left; 
+            margin: 20px auto; 
+            background-size: cover;
+        }
+        .centerbaihat{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background-image: url(wallpaperflare.com_wallpaper.jpg);
+            background-size: cover;
+        }
+        .centerbaihat audio {
+        width: 60%;
+        height: 60px;
+         border-radius: 350px;
+        background-color: rgb(102, 20, 127);
+        padding: 20px;
+        border: 5px solid rgb(255, 255, 255) ;
+        }
+        
+
+        .loi-bai-hat{
+            
+            color:aliceblue;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 16px;
+            border: 15px solid rgb(0, 0, 0); 
+            padding: 10px; 
+            font-size: 20px;
+            font-weight: bold;  
+            background-color: rgb(91, 35, 110);
+            text-align: center;
+        }
+        .suggestions {
+            position: absolute;
+            top: 100%;
+            left: 0;
+            width: 100%; /* Chiều dài bằng 100% ô tìm kiếm */
+            background: white;
+            border: 1px solid #ccc;
+            z-index: 10;
+    }
+    .suggestions div {
+            padding: 10px;
+            font-size: 20px;
+            cursor: pointer;
+            transition: background 0.2s;
+    }
+
+            .suggestions div:hover {
+            background: #f2f2f2;
+    }
+            .input-wrapper {
+            position: relative;
+            width: 1200px; /* Đảm bảo giống width input */
+    }
+
+    </style>
+</head>
+<body>
+    <form action="#" method="GET">
+        <div class="thanh-ngang">
+            <a href="index.html" target="_self" title="trở về home">
+                <img src="theresa.png" height="80">
+            </a>    
+            <div class="input-wrapper">
+                <input type="text" name="tenbaihat" placeholder="Nhập tên bài hát"> 
+                <div class="suggestions"></div>
+            </div>
+            <button type="submit">Tìm Kiếm</button>
+        </div>
+    </form>
+        <div class="centerbaihat">
+                <div class="title-box"><a href="tacgiaNightSky.html">Orangestar</a></div>
+                    <div class="hinh-vuong"></div>
+                <div class="title-box">Surges</div>
+            <audio controls>
+                <source src="Surge.mp3">
+            </audio>
+        </div>
+    <div class="loi-bai-hat">
+        <h1>Lời Bài Hát</h1>
+        <pre>
+流れ続く空と日々の狭間に
+形のない今日をそれでも進む
+何も知らぬ朝と清かな風に
+息を繋ぐ僕らの声は何を望む？
+迷っていた君に届かない
+言葉はいつだって単純で
+目指していた明日に届かない
+心が僕らには最高で
+            
+わかっていたって諦め切れない
+心の奥がまだ燃えていて
+何もないなんて謂えない僕ら
+大人になる前の延長戦
+足を踏み出したその先の空を
+駆け上がる僕らの日常が
+願った未来を越える未来まで
+止まらぬ僕たちの最高を目指して征く
+            
+君に届かない
+言葉はいつだって単純で
+目指していた明日に届かない
+心がいつまでも燃えていて
+描いた未来が昨日になるまで
+止まらぬ僕たちの熱情が
+踠いていたって何も掴めない光が
+僕らには上等！」なんて歌っている
+            
+形のない今日をそれでも進む
+行方のない朝の穏やかな風に
+涙滲む僕らの声は何を望む？
+迷っていた君に届かない
+(誰も何もかも知り得ない)
+言葉はいつだって単純で
+(願っていた明日に届かない心は)
+君も知らぬ君はいつだってそこに
+いつだってその先を目指している
+            
+わかっていたって諦め切れない
+心の奥がまだ燃えていて
+望まぬ未来がそこにあったって進む
+僕たちは最高を目指して征ける
+            
+言葉にならない心の全部を燃やしてゆけ
+踠いていたって何も掴めない光が
+僕らには上等だ！って
+目指していた 誰も知り得ない
+夜明けを僕たちは越えてゆけ
+ </pre>
+ </div>
+ <script src="Timkiem.js"></script>
+ </body>
+ </html>

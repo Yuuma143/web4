@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <title>TM</title>
+    <link rel="icon" href="theresa.png">
+    <style>
+        .thanh-ngang {
+            background-color: rgb(102, 20, 127);
+            border: 8px solid black;
+            display: flex;
+            align-items: center;
+        }
+
+        .thanh-ngang input[type="text"] {
+            width: 1200px;
+            height: 40px;
+            font-size: 18px;
+            padding: 10px;
+            border: 8px solid rgb(0, 0, 0);
+            margin-right: 10px;
+        }
+
+        .thanh-ngang button {
+            height: 40px;
+            font-size: 16px;
+            background-color: rgb(255, 255, 255);
+            border: 4px solid black;
+            margin-left: 40px;
+        }
+        .title-box {
+        background: rgba(255, 255, 255, 0.8); 
+        padding: 10px 20px;
+        margin: 20px;
+        border-radius: 10px; 
+        font-size: 24px;
+        font-weight: bold;
+        color: black;
+        text-align: center;
+        border: 3px solid black;
+}
+        .hinh-vuong{
+            height: 200px;
+            width: 200px;
+            border: 12px solid rgb(0, 0, 0);    
+            background-image: url(waiting.jpg);
+            background-position: left; 
+            margin: 20px auto; 
+            background-size: cover;
+        }
+        .centerbaihat{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background-image: url(wallpaperflare.com_wallpaper.jpg);
+            background-size: cover;
+        }
+        .centerbaihat audio {
+        width: 60%;
+        height: 60px;
+         border-radius: 350px;
+        background-color: rgb(102, 20, 127);
+        padding: 20px;
+        border: 5px solid rgb(255, 255, 255) ;
+        }
+        
+
+        .loi-bai-hat{
+            
+            color:aliceblue;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 16px;
+            border: 15px solid rgb(0, 0, 0); 
+            padding: 10px; 
+            font-size: 20px;
+            font-weight: bold;  
+            background-color: rgb(91, 35, 110);
+            text-align: center;
+        }
+        .suggestions {
+            position: absolute;
+            top: 100%;
+            left: 0;
+            width: 100%;
+            /* Chiều dài bằng 100% ô tìm kiếm */
+            background: white;
+            border: 1px solid #ccc;
+            z-index: 10;
+        }
+
+        .suggestions div {
+            padding: 10px;
+            font-size: 20px;
+            cursor: pointer;
+            transition: background 0.2s;
+        }
+
+        .suggestions div:hover {
+            background: #f2f2f2;
+        }
+
+        .input-wrapper {
+            position: relative;
+            width: 1200px;
+        }
+
+    </style>
+</head>
+<body>
+    <form action="#" method="GET">
+        <div class="thanh-ngang">
+
+            <a href="index.html" target="_self" title="trở về home">
+                <img src="theresa.png" height="80">
+            </a>
+            <div class="input-wrapper">
+                <input type="text" name="tenbaihat" placeholder="Nhập tên bài hát">
+                <div class="suggestions"></div>
+            </div>
+            <button type="submit">Tìm Kiếm</button>
+        </div>
+    </form>
+        <div class="centerbaihat">
+                <div class="title-box"><a href="tacgiaYORUSHIKA.HTML">Avicii</a></div>
+                    <div class="hinh-vuong"></div>
+                <div class="title-box">Waiting For Love</div>
+            <audio controls>
+                <source src="Avicii - Waiting For Love (Lyric Video).mp3">
+            </audio>
+        </div>
+    <div class="loi-bai-hat">
+        <h1>Lời Bài Hát</h1>
+        <pre>
+Where there's a will, there's a way, kind of beautiful
+And every night has its day, so magical
+And if there's love in this life, there's no obstacle
+That can't be defeated
+For every tyrant, a tear for the vulnerable
+In every lost soul, the bones of a miracle
+For every dreamer, a dream, we're unstoppable
+ With something to believe in
+ Monday left me broken
+Tuesday, I was through with hoping
+ Wednesday, my empty arms were open
+Thursday, waiting for love, waiting for love
+Thank the stars, it's Friday
+I'm burning like a fire gone wild on Saturday
+Guess I won't be coming to church on Sunday
+I'll be waiting for love, waiting for love to come around
+ We are one of a kind, irreplaceable
+How did I get so blind and so cynical?
+If there's love in this life, we're unstoppable
+No, we can't be defeated
+Monday left me broken
+Tuesday, I was through with hoping
+Wednesday, my empty arms were open
+Thursday, waiting for love, waiting for love
+Thank the stars, it's Friday
+I'm burning like a fire gone wild on Saturday
+Guess I won't be coming to church on Sunday
+I'll be waiting for love, waiting for love to come around
+        </pre>
+    </div>
+    <script src="Timkiem.js"></script>
+</body> 
+</html>

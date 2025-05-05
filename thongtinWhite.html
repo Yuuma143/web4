@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <title>TM</title>
+    <style>
+       .thanh-ngang {
+            background-color: rgb(102, 20, 127);
+            border: 8px solid black;
+            display: flex;
+            align-items: center;
+        }
+
+        .thanh-ngang input[type="text"] {
+            width: 1200px;
+            height: 40px;
+            font-size: 18px;
+            padding: 10px;
+            border: 8px solid rgb(0, 0, 0);
+            margin-right: 10px;
+        }
+
+        .thanh-ngang button {
+            height: 40px;
+            font-size: 16px;
+            background-color: rgb(255, 255, 255);
+            border: 4px solid black;
+            margin-left: 40px;
+        }
+        .title-box {
+        background: rgba(255, 255, 255, 0.8); 
+        padding: 10px 20px;
+        border-radius: 10px; 
+        font-size: 24px;
+        font-weight: bold;
+        color: black;
+        text-align: center;
+        border: 3px solid black;
+}
+        .hinh-vuong{
+            height: 200px;
+            width: 200px;
+            border: 12px solid rgb(0, 0, 0);    
+            background-image: url(whitenights.jpg);
+            background-position: center; 
+            margin: 20px auto; 
+            background-size: cover;
+        }
+        .centerbaihat{
+            display: flex;
+        flex-direction: column;
+        align-items: center;
+        background-image: url(whitenightbackground.jpg);
+        background-size: cover;
+        background-position: center;
+    
+        }
+        .centerbaihat audio {
+        width: 60%;
+        height: 60px;
+         border-radius: 350px;
+        background-color: rgb(102, 20, 127);
+        padding: 20px;
+        border: 5px solid rgb(255, 255, 255) ;
+        }
+
+
+        .loi-bai-hat{
+            text-align: center;
+            color:aliceblue;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 16px;
+            border: 15px solid rgb(0, 0, 0); 
+            padding: 10px; 
+            font-size: 20px;
+            font-weight: bold;  
+            background-color: rgb(91, 35, 110);
+            
+        }
+        .baihattacgia .title-box {
+            max-width: 400px;
+            margin: 10px auto;
+
+        }
+        .suggestions {
+            position: absolute;
+            top: 100%;
+            left: 0;
+            width: 100%;
+            /* Chiều dài bằng 100% ô tìm kiếm */
+            background: white;
+            border: 1px solid #ccc;
+            z-index: 10;
+        }
+
+        .suggestions div {
+            padding: 10px;
+            font-size: 20px;
+            cursor: pointer;
+            transition: background 0.2s;
+        }
+
+        .suggestions div:hover {
+            background: #f2f2f2;
+        }
+
+        .input-wrapper {
+            position: relative;
+            width: 1200px;
+        }
+
+    </style>
+</head>
+<body>
+    <form action="#" method="GET">
+        <div class="thanh-ngang">
+
+            <a href="index.html" target="_self" title="trở về home">
+                <img src="theresa.png" height="80">
+            </a>
+            <div class="input-wrapper">
+                <input type="text" name="tenbaihat" placeholder="Nhập tên bài hát">
+                <div class="suggestions"></div>
+            </div>
+            <button type="submit">Tìm Kiếm</button>
+        </div>
+    </form>
+        <div class="centerbaihat">
+                <div class="title-box"><a href="tacgiaHoyomix.html">HoYo-Mix</a></div>
+            <div class="hinh-vuong"></div>
+                <div class="title-box">White night</div>
+            <audio controls>    
+                <source src="y2mate.com - WHITE NIGHT.mp3">
+            </audio>
+        </div>
+    <div class="loi-bai-hat">
+        <h1>Lời Bài Hát</h1>
+        <pre>
+I want you to show me
+our fantasy (Your fantasy)
+No past and no future
+That's what I need (That's what I need)
+The groove takes it over
+We'll wait and see
+Even I might blank out
+You and me
+            
+I thought that dream could light our way
+(You take me higher, take me away, woah)
+Oh, be my savior and take me away
+(Away, away)
+(Take me away)
+            
+Tick and tock, once more
+You're hosting (You're hosting)
+A magic show I cannot escape (I cannot escape)
+There's nothing else left for me to do
+Going to the other side (Other side)
+            
+I don't wanna be alone tonight (Oh, woah)
+Oh, lead mе with your altered sign
+Therе's no one else left for me to lose
+Heading to the other side (Other side)
+            
+Oh, yeah
+Oh, woah
+(You take me higher, take me away)
+Woah, just be my savior and take me away
+(Away, away)
+Sing it with me everyone!
+            
+            
+I don't wanna be alone tonight
+Oh, bring me to the other side (Come on)
+There's no one else left for me to lose
+Going to the other side (Other side)
+            
+I don't wanna be alone tonight (Oh, woah)
+I'll bring you to my best disguise (Let's go)
+Cause I don't need, don't need to know the truth
+Let me rave forever in your lie
+            
+Woah, oh-woah
+(Come on)
+Oh, woah
+(Let's go)
+Oh, woah
+        </pre>
+    </div>
+    <script src="Timkiem.js"></script>
+</body> 
+</html>
