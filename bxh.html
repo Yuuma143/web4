@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+  <title>TM</title>
+  <link rel="icon" href="theresa.png">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      color: white;
+      margin: 0;
+      padding: 0;
+      background: url('backgroundNightSky.jpg') top / cover no-repeat;
+    }
+
+    h1 {
+      font-size: 36px;
+      margin: 20px auto;
+      color: #ffecb3;
+      text-align: center;
+    }
+
+    .controls {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    .controls button {
+      margin: 0 10px;
+      padding: 10px 20px;
+      background-color: #ffecb3;
+      color: black;
+      border: none;
+      border-radius: 5px;
+      font-weight: bold;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+
+    .controls button:hover {
+      background-color: #ffd54f;
+    }
+
+    .top-chart {
+      width: 80%;
+      margin: auto;
+      border-collapse: collapse;
+      font-size: 18px;
+      border-radius: 10px;
+      overflow: hidden;
+      backdrop-filter: blur(4px);
+    }
+
+    .top-chart th,
+    .top-chart td {
+      padding: 12px 15px;
+      text-align: left;
+    }
+
+    .top-chart th {
+      background-color: rgba(255, 255, 255, 0.12);
+      font-weight: bold;
+    }
+
+    .top-chart tr {
+      opacity: 0;
+      animation: fadeIn 0.8s ease forwards;
+      transition: all 0.3s ease;
+    }
+
+    .top-chart tr:hover {
+      background-color: rgba(255, 255, 255, 0.12);
+      transform: scale(1.01);
+    }
+
+    .top-chart img {
+      border-radius: 8px;
+      box-shadow: 0 0 6px rgba(255, 255, 255, 0.3);
+      height: 60px;
+    }
+
+    .top-chart td a {
+      text-decoration: none;
+      color: #ffecb3;
+      font-weight: bold;
+      transition: color 0.2s;
+    }
+
+    .top-chart td a:hover {
+      color: #ffd54f;
+    }
+
+    .top-chart .hot {
+      display: inline-block;
+      animation: flicker 1.6s infinite alternate;
+    }
+
+    @keyframes flicker {
+      from {
+        opacity: 0.8;
+        transform: scale(1);
+      }
+
+      to {
+        opacity: 1;
+        transform: scale(1.1);
+      }
+    }
+
+    @keyframes fadeIn {
+      to {
+        opacity: 1;
+      }
+    }
+
+    .top-chart tr:nth-child(2) td:first-child::after {
+      content: " 👑";
+      font-size: 20px;
+    }
+
+    .thanh-ngang {
+      background-color: rgb(102, 20, 127);
+      border: 8px solid black;
+      display: flex;
+      align-items: center;
+    }
+
+    .thanh-ngang input[type="text"] {
+      width: 1200px;
+      height: 40px;
+      font-size: 18px;
+      padding: 10px;
+      border: 8px solid rgb(0, 0, 0);
+      margin-right: 10px;
+    }
+
+    .thanh-ngang button {
+      height: 40px;
+      font-size: 16px;
+      background-color: rgb(255, 255, 255);
+      border: 4px solid black;
+      margin-left: 40px;
+    }
+
+    @keyframes pulse {
+      0% {
+        transform: scale(1);
+        background-color: #ffeaa7;
+      }
+
+      50% {
+        transform: scale(1.05);
+        background-color: #fab1a0;
+      }
+
+      100% {
+        transform: scale(1);
+        background-color: #fff;
+      }
+    }
+
+    #filter-genre {
+      background-color: rgba(255, 255, 255, 0.2);
+      /* Nền trong suốt với màu trắng nhẹ */
+      border: 2px solid rgba(255, 255, 255, 0.4);
+      /* Viền mờ */
+      color: white;
+      /* Màu chữ trắng */
+      font-size: 16px;
+      padding: 10px;
+      border-radius: 5px;
+      /* Bo góc để tạo cảm giác mềm mại */
+      backdrop-filter: blur(8px);
+      /* Hiệu ứng làm mờ nền phía sau */
+      transition: background-color 0.3s, color 0.3s;
+      /* Hiệu ứng chuyển màu */
+    }
+
+    #filter-genre:hover {
+      background-color: rgba(255, 255, 255, 0.3);
+      /* Tăng độ sáng của nền khi hover */
+      color: #ffd54f;
+      /* Màu chữ vàng khi hover */
+    }
+
+    #filter-genre {
+      background-color: rgba(0, 20, 40, 0.7);
+      /* Gần đen với chút ánh xanh dương, trong suốt */
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      /* Viền mờ nhạt */
+      color: white;
+      font-size: 16px;
+      padding: 10px;
+      border-radius: 5px;
+      backdrop-filter: blur(5px);
+      transition: background-color 0.3s, color 0.3s;
+    }
+
+    #filter-genre:hover {
+      background-color: rgba(0, 30, 60, 0.8);
+      /* Đậm hơn khi hover */
+      color: #ffd54f;
+    }
+
+    #filter-genre option {
+      background-color: rgba(0, 10, 20, 0.6);
+      /* Nền tối hơn cho các tùy chọn */
+      color: white;
+      font-size: 16px;
+      padding: 10px;
+      border: none;
+      transition: background-color 0.3s;
+    }
+
+    #filter-genre option:hover {
+      background-color: rgba(0, 20, 40, 0.7);
+      /* Đậm hơn khi hover vào tùy chọn */
+    }
+
+    .suggestions {
+      position: absolute;
+      top: 100%;
+      left: 0;
+      width: 100%;
+      /* Chiều dài bằng 100% ô tìm kiếm */
+      background: white;
+      border: 1px solid #ccc;
+      z-index: 10;
+    }
+
+    .suggestions div {
+      padding: 10px;
+      font-size: 20px;
+      cursor: pointer;
+      transition: background 0.2s;
+      color: black;
+    }
+
+    .suggestions div:hover {
+      background: #f2f2f2;
+    }
+
+    .input-wrapper {
+      position: relative;
+      width: 1200px;
+    }
+  </style>
+</head>
+
+<body>
+  <form action="#" method="GET">
+    <div class="thanh-ngang">
+
+        <a href="index.html" target="_self" title="trở về home">
+            <img src="theresa.png" height="80">
+        </a>
+        <div class="input-wrapper">
+            <input type="text" name="tenbaihat" placeholder="Nhập tên bài hát">
+            <div class="suggestions"></div>
+        </div>
+        <button type="submit">Tìm Kiếm</button>
+    </div>
+</form>
+  <h1>Bảng xếp hạng 🔥</h1>
+
+  <!-- Dropdown để lọc theo thể loại -->
+
+  <table class="top-chart">
+    <tr style="background-color: rgba(255, 255, 255, 0.1);">
+      <th>#</th>
+      <th>Ảnh</th>
+      <th>Bài hát</th>
+      <th>Nghệ sĩ</th>
+      <th>Thể loại</th>
+      <th>Lượt xem</th>
+      <TH><select id="filter-genre">
+          <option value="all">🎵 Tất cả thể loại</option>
+          <option value="Motivational">🔥 Sôi Động / Motivational</option>
+          <option value="Epic">🚀 Epic / Cảm Xúc Mạnh</option>
+          <option value="Chill">🌙 Chill</option>
+          <option value="Indie">🎧 Indie</option>
+        </select>
+      </TH>
+    </tr>
+
+    <!-- 🎧 Chill -->
+    <tr data-genre="Chill">
+      <td>#1</td>
+      <td><img src="VexentoHome.jpg" height="60"></td>
+      <td><a href="thongtinhome.html">Home</a></td>
+      <td>Vexento</td>
+      <td>Chill</td>
+      <td>🔥🔥</td>
+    </tr>
+    <tr data-genre="Chill">
+      <td>#2</td>
+      <td><img src="Haru.jpg" height="60"></td>
+      <td><a href="thongtinharu.html">Haru</a></td>
+      <td>Yorushika</td>
+      <td>Chill</td>
+      <td>🔥🔥🔥</td>
+    </tr>
+    <tr data-genre="Chill">
+      <td>#3</td>
+      <td><img src="whitenights.jpg" height="60"></td>
+      <td><a href="thongtinWhitenight.html">White Nights</a></td>
+      <td>Jake Miller, HOYO-MiX</td>
+      <td>Chill</td>
+      <td>🔥🔥</td>
+    </tr>
+    <tr data-genre="Chill">
+      <td>#4</td>
+      <td><img src="Robin.webp" height="40"></td>
+      <td><a href="thongtinRobin.html">Hope Is the Thing With Feathers</a></td>
+      <td>Chevy, HOYO-MiX</td>
+      <td>Chill</td>
+      <td>🔥</td>
+    </tr>
+    <tr data-genre="Chill">
+      <td>#5</td>
+      <td><img src="lonely.jpg" height="50"></td>
+      <td><a href="thongtinLonely.html">Lonely Dance</a></td>
+      <td>Vexento</td>
+      <td>Chill</td>
+      <td>🔥🔥</td>
+    </tr>
+    <tr data-genre="Epic">
+      <td>#6</td>
+      <td><img src="ab67616d0000b273c017c4e208b9aa70cd07a1d2.jpg" height="60"></td>
+      <td><a href="thongtinAcross.html">Across The Wind</a></td>
+      <td>Arknights</td>
+      <td>Epic</td>
+      <td>🔥🔥🔥</td>
+    </tr>
+    <tr data-genre="Epic">
+      <td>#7</td>
+      <td><img src="Reforge.jpg" height="60"></td>
+      <td><a href="thongtinReforge.html">Reforge</a></td>
+      <td>Chevy, HOYO-MiX</td>
+      <td>Epic</td>
+      <td>🔥🔥</td>
+    </tr>
+    <tr data-genre="Epic">
+      <td>#8</td>
+      <td><img src="artworks-000168747774-km7vyi-t500x500.jpg" height="60"></td>
+      <td><a href="thongtinnightsky.html">アスノヨゾラ哨戒班</a></td>
+      <td>Orangestar</td>
+      <td>Epic</td>
+      <td>🔥🔥🔥</td>
+    </tr>
+    <tr data-genre="Epic">
+      <td>#9</td>
+      <td><img src="whitenights.jpg" height="60"></td>
+      <td><a href="thongtinWhitenight.html">White Nights</a></td>
+      <td>HOYO-MiX</td>
+      <td>Epic</td>
+      <td>🔥🔥</td>
+    </tr>
+    <tr data-genre="Epic">
+      <td>#10</td>
+      <td><img src="Sures.jpg" height="60"></td>
+      <td><a href="thongtinSurges.html">Surges</a></td>
+      <td>Orangestar</td>
+      <td>Epic</td>
+      <td>🔥🔥🔥</td>
+    </tr>
+
+    <!-- 🔥 Sôi Động / Motivational -->
+    <tr data-genre="Motivational">
+      <td>#11</td>
+      <td><img src="thenights.png" height="60"></td>
+      <td><a href="thongtinTheNights.html">The Nights</a></td>
+      <td>Avicii</td>
+      <td>Motivational</td>
+      <td>🔥🔥🔥</td>
+    </tr>
+    <tr data-genre="Motivational">
+      <td>#12</td>
+      <td><img src="Yoasobi_-_Idol.png" height="60"></td>
+      <td><a href="thongtinIDOL.html">Idol</a></td>
+      <td>Yoasobi</td>
+      <td>Motivational</td>
+      <td>🔥🔥</td>
+    </tr>
+    <tr data-genre="Motivational">
+      <td>#13</td>
+      <td><img src="artworks-zj26ksurO1jziY8F-avo19Q-t500x500.jpg" height="60"></td>
+      <td><a href="thongtinmonitor.html">Monitoring</a></td>
+      <td>Deco*27</td>
+      <td>Motivational</td>
+      <td>🔥🔥</td>
+    </tr>
+    <tr data-genre="Motivational">
+      <td>#14</td>
+      <td><img src="android.jpg" height="60"></td>
+      <td><a href="thongtinAndroid.html">Android Girl</a></td>
+      <td>Deco*27</td>
+      <td>Motivational</td>
+      <td>🔥🔥🔥</td>
+    </tr>
+
+    <!-- 🎨 Indie & Art-style -->
+    <tr data-genre="Indie">
+      <td>#15</td>
+      <td><img src="kaijuu.jpg" height="60"></td>
+      <td><a href="thongtinKaijuu.html">Kaijuu</a></td>
+      <td>Sakanaction</td>
+      <td>Indie</td>
+      <td>🔥🔥</td>
+    </tr>
+    <tr data-genre="Indie">
+      <td>#16</td>
+      <td><img src="waiting.jpg" height="60"></td>
+      <td><a href="thongtinWaitingforlove.html">Waiting for Love</a></td>
+      <td>Avicii</td>
+      <td>Indie</td>
+      <td>🔥🔥🔥</td>
+    </tr>
+    <tr data-genre="Indie">
+      <td>#17</td>
+      <td><img src="wasurete.jpg" height="60"></td>
+      <td><a href="thongtinWasurete.html">Wasurete</a></td>
+      <td>Yorushika</td>
+      <td>Indie</td>
+      <td>🔥🔥🔥</td>
+    </tr>
+    <tr data-genre="J-pop">
+      <td>#18</td>
+      <td><img src="monster.jpg" height="60"></td>
+      <td><a href="thongtinmonster.html">Monster</a></td>
+      <td>YOASOBI</td>
+      <td>J-pop</td>
+      <td>🔥🔥🔥</td>
+    </tr>
+  </table>
+  <script src="Timkiem.js"></script>
+  <script>
+    document.getElementById('filter-genre').addEventListener('change', function () {
+      const selected = this.value;
+      const rows = document.querySelectorAll('.top-chart tr[data-genre]');
+
+      rows.forEach(row => {
+        const genre = row.getAttribute('data-genre');
+        row.style.display = (selected === 'all' || genre === selected) ? '' : 'none';
+      });
+    });
+  </script>
