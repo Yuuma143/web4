@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+  <title>TM</title>
+  <link rel="icon" href="theresa.png">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      color: white;
+      margin: 0;
+      padding: 0;
+      background-image: url('backgroundNightSky.jpg');
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: top;
+      position: relative;
+    }
+
+    h1 {
+      color: #ffffff;
+      margin-bottom: 30px;
+      text-align: center;
+    }
+
+    .main table {
+      border-spacing: 50px 10px;
+    }
+
+    th {
+      width: 150px;
+      padding: 20px;
+      text-align: center;
+      border: 5px solid #ddd transparent;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      border-radius: 10px;
+      transition: all 0.3s ease;
+    }
+
+    th:hover {
+      transform: scale(1.03);
+    }
+
+
+    img {
+      border-radius: 10px;
+      transition: transform 0.3s ease;
+    }
+
+    img:hover {
+      transform: scale(1.05);
+    }
+
+    summary {
+      font-size: 20px;
+      cursor: pointer;
+    }
+
+    details {
+      margin-bottom: 20px;
+    }
+
+    p {
+      font-size: 16px;
+    }
+
+    details summary {
+      background-color: rgba(255, 255, 255, 0.1);
+      padding: 15px 20px;
+      border-radius: 10px;
+      border: 2px solid #ffffff40;
+      font-size: 24px;
+      font-weight: bold;
+      color: #fff;
+      transition: background-color 0.3s ease, transform 0.2s ease;
+      backdrop-filter: blur(5px);
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+      margin-bottom: 10px;
+    }
+
+    details[open] summary {
+      background-color: rgba(255, 255, 255, 0.2);
+    }
+
+    details summary:hover {
+      background-color: rgba(255, 255, 255, 0.3);
+      transform: scale(1.02);
+      cursor: pointer;
+    }
+
+    .thanh-ngang {
+      background-color: rgb(102, 20, 127);
+      border: 8px solid black;
+      display: flex;
+      align-items: center;
+    }
+
+    .thanh-ngang input[type="text"] {
+      width: 1200px;
+      height: 40px;
+      font-size: 18px;
+      padding: 10px;
+      border: 8px solid rgb(0, 0, 0);
+      margin-right: 10px;
+    }
+
+    .thanh-ngang button {
+      height: 40px;
+      font-size: 16px;
+      background-color: rgb(255, 255, 255);
+      border: 4px solid black;
+      margin-left: 40px;
+    }
+
+    details {
+      position: relative;
+      overflow: hidden;
+      border-radius: 10px;
+      margin-bottom: 30px;
+      padding: 10px;
+      z-index: 1;
+    }
+
+    .bxh {
+      text-align: center;
+      font-size: 50px;
+      ;
+
+    }
+
+    .bxh a {
+      text-decoration: none;
+      color: #ffd54f;
+    }
+
+    .suggestions {
+      position: absolute;
+      top: 100%;
+      left: 0;
+      width: 100%;
+      /* Chiều dài bằng 100% ô tìm kiếm */
+      background: white;
+      border: 1px solid #ccc;
+      z-index: 10;
+    }
+
+    .suggestions div {
+      padding: 10px;
+      font-size: 20px;
+      cursor: pointer;
+      transition: background 0.2s;
+      color: #000;
+    }
+
+    .suggestions div:hover {
+      background: #f2f2f2;
+    }
+
+    .input-wrapper {
+      position: relative;
+      width: 1200px;
+    }
+  </style>
+</head>
+
+<body>
+  <form action="#" method="GET">
+    <div class="thanh-ngang">
+
+      <a href="index.html" target="_self" title="trở về home">
+        <img src="theresa.png" height="80">
+      </a>
+      <div class="input-wrapper">
+        <input type="text" name="tenbaihat" placeholder="Nhập tên bài hát">
+        <div class="suggestions"></div>
+      </div>
+      <button type="submit">Tìm Kiếm</button>
+    </div>
+  </form>
+  <div class="main">
+    <h1>Yêu Thích</h1>
+
+<details>
+  <summary>Nhạc Yêu Thích</summary>
+  <table class="nhac-table">
+
+  </table>
+</details>
+
+<details>
+  <summary>Ca Sĩ Yêu Thích</summary>
+  <table class="casi-table">
+
+  </table>
+</details>
+
+
+  </div>
+  <script src="Timkiem.js"></script>
+  <script src="like.js"></script>
+</body>
+
+</html>
