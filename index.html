@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <link rel="icon" href="theresa.png">
+    <style>
+        body {
+            display: flex;
+            height: 100vh;
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        .main {
+            flex: 1;
+            border: 10px solid black;
+            height: 100%;
+            background-color: #3b3a3a;
+            color: aliceblue;
+            background-image: url(wallpaperflare.com_wallpaper.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+            overflow-y: auto;
+            padding: 20px;
+            box-sizing: border-box;
+            padding-top: 50px;
+        }
+
+        th {
+            width: 150px;
+            padding: 20px;
+            text-align: center;
+            border: 5px solid #ddd transparent;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            transition: all 0.3s ease;
+        }
+
+        th:hover {
+            transform: scale(1.03);
+        }
+
+        img {
+            border-radius: 10px;
+            transition: transform 0.3s ease;
+        }
+
+        .main table {
+            border-spacing: 50px 10px;
+        }
+
+        .sidebar {
+            position: relative;
+            top: 0;
+            left: 0;
+            border: 10px solid rgb(49, 6, 49);
+            width: 170px;
+            height: 100%;
+            background: rgb(56, 7, 56);
+            color: white;
+            padding: 10px;
+            box-sizing: border-box;
+            flex-shrink: 0;
+        }
+
+        .sidebar button {
+            width: 100%;
+            display: block;
+            padding: 20px;
+            font-size: 16px;
+            cursor: pointer;
+            background-color: rgb(56, 7, 56);
+            color: aliceblue;
+            border-bottom: 1px solid rgb(20, 19, 19);
+        }
+
+        .sidebar button:hover {
+            background-color: rgb(80, 20, 80);
+        }
+
+        .sidebar a {
+            text-decoration: none;
+            color: aliceblue;
+        }
+
+        .search-bar {
+            width: calc(100% - 200px);
+            position: fixed;
+            top: 0;
+            left: 170px;
+            padding: 10px;
+            background: #110404;
+            box-sizing: border-box;
+            display: flex;
+            justify-content: space-between;
+            z-index: 1000;
+        }
+
+        .search-bar input {
+            width: 100%;
+            padding: 8px;
+            font-size: 16px;
+        }
+
+        .search-bar button {
+            padding: 8px 16px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        .box1,
+        .box2,
+        .box3 {
+            width: 100%;
+            overflow-x: auto;
+            scrollbar-width: thin;
+            scrollbar-color: black;
+        }
+
+        #banner-wrapper {
+            position: relative;
+            width: 60%;
+            height: 400px;
+            z-index: 500;
+            margin: 0 auto;
+
+        }
+
+        #banner-container {
+            position: relative;
+            width: 100%;
+            height: 400px;
+            overflow: hidden;
+            border-radius: 15px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+            background-color: black;
+
+        }
+
+        #banner-container img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: opacity 1s ease;
+            border-radius: 15px;
+        }
+
+        .banner-button {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background-color: rgba(0, 0, 0, 0.6);
+            color: white;
+            border: none;
+            padding: 12px 18px;
+            font-size: 18px;
+            cursor: pointer;
+            border-radius: 50%;
+            z-index: 10;
+            transition: background-color 0.3s ease;
+        }
+
+        .banner-button:hover {
+            background-color: rgba(255, 255, 255, 0.6);
+            color: black;
+        }
+
+        #nuttrai {
+            left: 20px;
+        }
+
+        #nutphai {
+            right: 20px;
+        }
+
+        .suggestions {
+            position: absolute;
+            top: 100%;
+            left: 0;
+            width: 100%;
+            /* Chiều dài bằng 100% ô tìm kiếm */
+            background: white;
+            border: 1px solid #ccc;
+            z-index: 10;
+        }
+
+        .suggestions div {
+            padding: 10px;
+            font-size: 20px;
+            cursor: pointer;
+            transition: background 0.2s;
+        }
+
+        .suggestions div:hover {
+            background: #f2f2f2;
+        }
+
+        .input-wrapper {
+            position: relative;
+            width: 1200px;
+            /* Đảm bảo giống width input */
+        }
+    </style>
+    <title>TM</title>
+</head>
+
+<body>
+    <form>
+        <div class="search-bar">
+            <div class="input-wrapper">
+                <input type="text" name="tenbaihat" placeholder="Nhập tên bài hát"> 
+                <div class="suggestions"></div>
+            </div>
+        </div>
+    </form>
+
+    <div class="sidebar">
+        <a href="index.html" title="Trở về Home">
+            <img src="theresa.png" height="100">
+        </a>
+        <br>
+        <button><a href="http://127.0.0.1:5500/HOME.html" title="Trở về Home">Trang Chủ</a></button>
+        <br>
+        <button><a href="PlayList.html">Thể Loại</a></button>
+        <br>
+        <button><a href="yeuThich.html"> Play List</a></button>
+        <br>
+        <Button><a href="http://127.0.0.1:5500/DangNhap.html">Tài Khoản</a></Button>
+        <br>
+        <button><a href="bxh.html">Ranks</a></button>
+    </div>
+
+    <div class="main">
+        <div id="banner-wrapper">
+            <div id="banner-container"></div>
+            <button id="nuttrai" class="banner-button">❮</button>
+            <button id="nutphai" class="banner-button">❯</button>
+        </div>
+
+        <div class="box1">
+            <table>
+                <h1>Danh Sách Các Bài hát Được yêu Thích Nhất</h1>
+                <tr>
+                    <th><a href="thongtinmonitor.html"><img src="artworks-zj26ksurO1jziY8F-avo19Q-t500x500.jpg"
+                                height="100"></a>
+                        <p>Monitoring <br> Deco*27</p>
+                    </th>
+                    <th><a href="thongtinnightsky.html"><img src="artworks-000168747774-km7vyi-t500x500.jpg"
+                                height="100"></a>
+                        <p>Night Sky Patrol Of Tomorrow <br> Orangestar</p>
+                    </th>
+                    <th><a href="thongtinAcross.html"><img src="ab67616d0000b273c017c4e208b9aa70cd07a1d2.jpg"
+                                height="100"></a>
+                        <p>Across The WInd <br> Arknights</p>
+                    </th>
+                    <th><a href="thongtinharu.html"><img src="Haru.jpg" height="100"></a>
+                        <p>Haru<br>Yorushika</p>
+                    </th>
+                    <th><a href="thongtinhome.html"><img src="VexentoHome.jpg" height="100"></a>
+                        <p>Home<br>Vexento</p>
+                    </th>
+                </tr>
+            </table>
+        </div>
+
+        <hr>
+
+        <div class="box3">
+            <table>
+                <h1>Gợi Ý Nhạc Cho Bạn</h1>
+                <tr>
+                    <th><a href="thongtinRobin.html"><img src="Robin.webp" height="100"></a>
+                        <p>Hope Is the Thing With Feathers <br> Chevy, HOYO-MiX</p>
+                    </th>
+                    <th><a href="thongtinIDOL.html"><img src="Yoasobi_-_Idol.png" height="100"></a>
+                        <p>Idol <br> Yoasobi</p>
+                    </th>
+                    <th><a href="thongtinKaijuu.html"><img src="kaijuu.jpg" height="100"></a>
+                        <p>Kaijuu <br> Sakanaction</p>
+                    </th>
+                    <th><a href="thongtinTheNights.html"><img src="thenights.png" height="100"></a>
+                        <p>The Nights<br>Avicii</p>
+                    </th>
+                    <th><a href="thongtinWhite.html"><img src="whitenights.jpg" height="100"></a>
+                        <p>White Nights<br>Jake Miller, HOYO-MiX</p>
+                    </th>
+                </tr>
+            </table>
+        </div>
+
+        <hr>
+
+        <div class="box2">
+            <table>
+                <h1>Các Ca Sĩ Đang Nổi</h1>
+                <tr>
+                    <th><a href="tacgiaNightSky.html"><img src="Orangestar.jpg" height="100"></a>
+                        <p>Orangestar</p>
+                    </th>
+                    <th><a href="tacgiamonitor.html"><img src="deco27.jpg" height="100"></a>
+                        <p>Deco*27</p>
+                    </th>
+                    <th><a href="tacgiaAcross.html"><img src="arknights.jpg" height="100"></a>
+                        <p>Arknights</p>
+                    </th>
+                    <th><a href="tacgiaYORUSHIKA.HTML"><img src="yorushika.jpg" height="100"></a>
+                        <p>Yorushika</p>
+                    </th>
+                    <th><a href="tacgiaIdol.html"><img src="Yoasobi.jpg" height="100"></a>
+                        <p>Yoasobi</p>
+                    </th>
+                    <th><a href="tacgiaKaijuu.html"><img src="Sakanation.jpg" height="100"></a>
+                        <p>Sakanaction</p>
+                    </th>
+                    <th><a href="tacgiaHoyomix.html"><img src="Hoyomix.jpg" height="100"></a>
+                        <p>Hoyo-Mix</p>
+                    </th>
+                    <th><a href="tacgiaVEXETO.HTML"><img src="vexento.jpg" height="100"></a>
+                        <p>Vexento</p>
+                    </th>
+                    <th><a href="tacgiaTHEnight.html"><img src="avicii.jpg" height="100"></a>
+                        <p>Avicii</p>
+                    </th>
+                </tr>
+            </table>
+        </div>
+    </div>
+
+    <script src="Timkiem.js"></script>
+    <script src="banner.js"></script>
+</body>
+
+</html>
